@@ -8,6 +8,8 @@
             <class name="pageobjectstests.ContextMenuPageTest"/>
             <class name="pageobjectstests.DropDownPageTest"/>
             <class name="pageobjectstests.FileUploadPageTest"/>
+            <class name="pageobjectstests.HorizontalSliderPageTest"/>
+            <class name="pageobjectstests.HoversPageTest"/>
         </classes>
     </test>
 

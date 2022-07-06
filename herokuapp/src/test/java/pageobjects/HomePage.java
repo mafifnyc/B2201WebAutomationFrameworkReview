@@ -31,6 +31,8 @@ public class HomePage {
     WebElement lastKeyPressed;
     @FindBy (how = How.LINK_TEXT, using = "Multiple Windows")
     WebElement handlingNewWindow;
+    @FindBy (how = How.LINK_TEXT, using = "Form Authentication")
+    WebElement formAuthentication;
 
     public void goToCheckBoxPage() {
         checkBoxes.click();
@@ -70,5 +72,8 @@ public class HomePage {
     }
     public void goToMultipleWindowsPage() {
         handlingNewWindow.click();
+    }
+    public void goToFormAuthenticationPage() {
+        formAuthentication.click();
     }
 }

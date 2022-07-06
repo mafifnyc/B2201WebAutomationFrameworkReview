@@ -10,6 +10,7 @@
             <class name="pageobjectstests.FileUploadPageTest"/>
             <class name="pageobjectstests.HorizontalSliderPageTest"/>
             <class name="pageobjectstests.HoversPageTest"/>
+            <class name="pageobjectstests.FormAuthenticationPageTest"/>
         </classes>
     </test>
 

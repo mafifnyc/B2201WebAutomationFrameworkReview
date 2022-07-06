@@ -98,13 +98,13 @@ public class BrowserDriver {
 
     public static void captureScreenshot(WebDriver driver, String screenshotName){
 
-        DateFormat df = new SimpleDateFormat("(MM.dd.yyyy-HH:mma)");
+        SimpleDateFormat df = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
         Date date = new Date();
-        df.format(date);
+        String dateAndTime = df.format(date);
 
         File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         try {
-            FileUtils.copyFile(file, new File(System.getProperty("user.dir")+ "/screenshots/"+screenshotName+" "+df.format(date)+".png"));
+            FileUtils.copyFile(file, new File(System.getProperty("user.dir")+ "\\screenshots\\"+screenshotName+".png"));
             System.out.println("Screenshot captured");
         } catch (Exception e) {
             System.out.println("Exception while taking screenshot "+e.getMessage());;

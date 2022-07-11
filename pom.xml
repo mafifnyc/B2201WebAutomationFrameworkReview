@@ -11,6 +11,7 @@
     <modules>
         <module>utilities</module>
         <module>herokuapp</module>
+        <module>hrpms</module>
     </modules>
 
     <properties>

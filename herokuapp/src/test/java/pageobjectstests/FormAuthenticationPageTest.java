@@ -22,7 +22,6 @@ public class FormAuthenticationPageTest extends BrowserDriver {
         homePage.goToFormAuthenticationPage();
         formAuthenticationPage.enterUserName();
         formAuthenticationPage.enterPassword();
-        Assert.assertEquals(formAuthenticationPage.attemptToLogin(), "You logged into a secure area!\n" +
-                "×");
+        Assert.assertEquals(formAuthenticationPage.attemptToLogin(), "You logged into a secure area!\n" + "×");
     }
 }

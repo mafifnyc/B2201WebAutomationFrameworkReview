@@ -38,7 +38,7 @@ import java.util.concurrent.TimeUnit;
 public class BrowserDriver {
     public static WebDriver driver = null;
     public static String browserName = System.getProperty("browserName", "chrome");
-    public static final String url = System.getProperty("url", "http://the-internet.herokuapp.com/"); // http://the-internet.herokuapp.com/
+    public static final String url = System.getProperty("url", "http://hrpms.izaan.io/Auth/Account/Login?ReturnUrl=%2F"); // http://the-internet.herokuapp.com/
     public static String platform = System.getProperty("platform", "local");
     public static String os = System.getProperty("os", "windows");
     public static String cloudPlatformName = System.getProperty("cloudPlatformName", "browserstack");
@@ -97,19 +97,32 @@ public class BrowserDriver {
     }
 
     public static void captureScreenshot(WebDriver driver, String screenshotName){
-
-        SimpleDateFormat df = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");
         Date date = new Date();
-        String dateAndTime = df.format(date);
+        df.format(date);
 
         File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         try {
-            FileUtils.copyFile(file, new File(System.getProperty("user.dir")+ "\\screenshots\\"+screenshotName+".png"));
+            FileUtils.copyFile(file, new File(System.getProperty("user.dir")+ "/screenshots/"+screenshotName+" "+df.format(date)+".png"));
             System.out.println("Screenshot captured");
         } catch (Exception e) {
             System.out.println("Exception while taking screenshot "+e.getMessage());;
         }
 
+//        SimpleDateFormat df = new SimpleDateFormat("dd-M-yyyy hh:mm:ssa");
+//        Date date = new Date();
+//        String dateAndTime = df.format(date);
+//        DateFormat df = new SimpleDateFormat("(MM.dd.yyyy-HH:mma)");
+//        Date date = new Date();
+//        df.format(date);
+//
+//        File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+//        try {
+//            FileUtils.copyFile(file, new File(System.getProperty("user.dir")+ "\\screenshots\\"+screenshotName+".png"));
+//            System.out.println("Screenshot captured");
+//        } catch (Exception e) {
+//            System.out.println("Exception while taking screenshot "+e.getMessage());;
+//        }
     }
     @AfterSuite
     public void generateReport() {

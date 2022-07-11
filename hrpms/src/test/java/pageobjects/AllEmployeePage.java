@@ -13,7 +13,7 @@ public class AllEmployeePage {
     WebElement nameInsideEmployeeList;
 
     public void searchForCurrentEmployee() {
-        employeeSearchBox.sendKeys("Dwayne Johnson");
+        employeeSearchBox.sendKeys("Dwayne 'TheRock' Johnson");
     }
     public String assertEmployeeNotFound() {
         String employeeNotFound = textInsideEmployeeList.getText();

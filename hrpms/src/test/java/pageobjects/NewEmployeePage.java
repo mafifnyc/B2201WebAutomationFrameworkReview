@@ -27,7 +27,7 @@ public class NewEmployeePage {
     @FindBy (how = How.XPATH, using = "//*[@id=\"ui-datepicker-div\"]/div/div/select[2]")
     WebElement dobYearSelector;
     @FindBy (how = How.CSS, using = ".ui-state-default")
-    public List<WebElement> dobDateSelector;
+    List<WebElement> dobDateSelector;
     @FindBy (how = How.ID, using = "birthPlace")
     WebElement enterEmployeePlaceOfBirthBox;
     @FindBy (how = How.ID, using = "religion")
@@ -39,7 +39,7 @@ public class NewEmployeePage {
     @FindBy (how = How.ID, using = "joiningDateGovtService")
     WebElement enterEmployeeDateOfJoiningBox;
     @FindBy (how = How.CSS, using = ".ui-state-default")
-    public List<WebElement> joinDateSelector;
+    List<WebElement> joinDateSelector;
     @FindBy (how = How.ID, using = "gender")
     WebElement enterEmployeeGenderBox;
     @FindBy (how = How.ID, using = "emailAddressPersonal")
@@ -109,5 +109,4 @@ public class NewEmployeePage {
         String duplicateText = duplicateAccountIDError.getText();
         return duplicateText;
     }
-
 }

@@ -53,15 +53,15 @@ public class NewEmployeePage {
     @FindBy (how = How.XPATH, using = "//*[@id=\"infoCreateForm\"]/div[1]/ul/li")
     WebElement duplicateAccountIDError;
 
-    public void typeAllInfoInBox() {
-        enterEmployeeIDBox.sendKeys("100001");
-        enterEmployeeNameBox.sendKeys("Dwayne Johnson");
-        enterEmployeeMotherNameBox.sendKeys("Ata Johnson");
-        enterEmployeeFatherNameBox.sendKeys("Rocky Johnson");
-        enterEmployeeEmailOfficeBox.sendKeys("dwaynetherockjohnson@rockmail.com");
-        enterEmployeeEmailPersonalBox.sendKeys("dwaynejohnson@gmail.com");
-        enterEmployeeMobileNumberOfficeBox.sendKeys("+12342345678");
-        enterEmployeeMobileNumberPersonalBox.sendKeys("+17897891234");
+    public void typeAllInfoInBox(String empID, String empName, String motherName, String fatherName, String emailOffice, String emailPersonal, String mobileNumberOffice, String mobileNumberPersonal) {
+        enterEmployeeIDBox.sendKeys(empID);
+        enterEmployeeNameBox.sendKeys(empName);
+        enterEmployeeMotherNameBox.sendKeys(motherName);
+        enterEmployeeFatherNameBox.sendKeys(fatherName);
+        enterEmployeeEmailOfficeBox.sendKeys(emailOffice);
+        enterEmployeeEmailPersonalBox.sendKeys(emailPersonal);
+        enterEmployeeMobileNumberOfficeBox.sendKeys(mobileNumberOffice);
+        enterEmployeeMobileNumberPersonalBox.sendKeys(mobileNumberPersonal);
     }
     public void selectAllDropdowns() {
         Select empType = new Select(enterEmployeeTypeBox);

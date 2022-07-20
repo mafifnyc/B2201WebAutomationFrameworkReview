@@ -25,7 +25,7 @@ public class NewEmployeePageTest extends BrowserDriver {
     @DataProvider
     public Object[][] dataProvider() throws Exception {
         MyDataReader myDataReader = new MyDataReader();
-        String filePath = "C:\\Users\\QAAEB2201\\IdeaProjects\\B2201WebAutomationFrameworkReview\\hrpms\\testData\\empData.xlsx";
+        String filePath = System.getProperty("user.dir")+"/testData/empData.xlsx";
         myDataReader.setExcelFile(filePath);
         Object[][] data = myDataReader.getExcelSheetData("Sheet1");
         return data;
